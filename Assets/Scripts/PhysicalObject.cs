@@ -7,7 +7,7 @@ using System;
 [RequireComponent(typeof(Rigidbody))]
 [AddComponentMenu("MyAttributes/PhysicalObject")]
 public class PhysicalObject : MonoBehaviour
-{    
+{
     [Header("Object parameters")]
     [SerializeField] private Color _ojectColor = Color.blue;
     public Color ObjectColor => _ojectColor;
@@ -18,7 +18,9 @@ public class PhysicalObject : MonoBehaviour
     [HideInInspector] public const float AtmospherePressure = 0;
 
     [Space(20)]
-    [SerializeField][Range(0, 360)][Tooltip("min 0, max 360")] private float _rotateSpeed = 20;
+    [Range(0, 360)]    
+    [Tooltip("min 0, max 360")]
+    [SerializeField] private float _rotateSpeed = 20;
     [SerializeField] private float _moveSpeed = 3;
 
     private Rigidbody _rigidbody;

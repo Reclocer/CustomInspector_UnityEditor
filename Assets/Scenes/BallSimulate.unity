@@ -531,7 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ojectColor: {r: 0.056648254, g: 0.6320754, b: 0.12139023, a: 1}
   _objectMass: 1
-  _rotateSpeed: 20
+  _rotateSpeed: 22
   _moveSpeed: -0.27
   Specification: 
 --- !u!54 &1248538583
