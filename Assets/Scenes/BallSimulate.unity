@@ -824,6 +824,7 @@ GameObject:
   - component: {fileID: 1691141424}
   - component: {fileID: 1691141423}
   - component: {fileID: 1691141425}
+  - component: {fileID: 1691141426}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -843,18 +844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa66c288bedf3442b611a03a571535e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guns:
-  - _ammo:
-    - MaxBullets: 30
-      _bullets: 0
-      _typeOfBullet: {fileID: 0}
-    - MaxBullets: 30
-      _bullets: 0
-      _typeOfBullet: {fileID: 0}
-    - MaxBullets: 30
-      _bullets: 0
-      _typeOfBullet: {fileID: 0}
-  - _ammo: []
 --- !u!4 &1691141424
 Transform:
   m_ObjectHideFlags: 0
@@ -883,21 +872,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carriages:
   - _boxes:
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
   - _boxes:
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
   - _boxes:
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-    - _amountOfLetters: 10
-  _amountOfLettersInTrain: 120
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+    - _amountOfLetters: 500
+  _amountOfLettersInTrain: 6000
+--- !u!114 &1691141426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691141422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b108756a6abb3ff48860c173cb109e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carriages: []
+  _amountOfLettersInTrain: 0
 --- !u!1 &1753182484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,3 +1067,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3856679513862136115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3856679513862136117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301767152409647085, guid: cd8b77c3395d9c74e85d9e1b2371f942,
+    type: 3}
+  m_PrefabInstance: {fileID: 3856679513862136115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3856679513862136118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856679513862136117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fe92f66499091459c47d811e512e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5,15 +5,16 @@ using UnityEditor;
 [CustomEditor(typeof(Soldier))]
 public class SoldierEditor : Editor
 {
-    private Soldier Target;
+    private Soldier _target;
+
     public void OnEnable()
     {
-        Target = (Soldier)base.target;
+        _target = (Soldier)base.target;
     }
 
     public override void OnInspectorGUI()
     {
-        Target.Name = EditorGUILayout.TextField("Имя", Target.Name);
-        Target.Health = EditorGUILayout.IntSlider("Здоровье", Target.Health, 0, 100);
+        _target.Name = EditorGUILayout.TextField("Имя", _target.Name);
+        _target.Health = EditorGUILayout.IntSlider("Здоровье", _target.Health, 0, 100);
     }
 }

@@ -4,5 +4,17 @@
 public class Box 
 {
     [SerializeField] private int _amountOfLetters = 500;
-    public int AmountOfLetters => _amountOfLetters;
+    public int AmountOfLetters
+    {
+        get
+        {
+            return _amountOfLetters;
+        }
+        set
+        {
+            _amountOfLetters = value;
+        }
+    }
+
+
 }

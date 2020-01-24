@@ -3,21 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Train : MonoBehaviour
-{
-    
-    [SerializeField] private Carriage[] _carriages;
+{    
+    [SerializeField] protected Carriage[] _carriages;
+    public Carriage[] Carriages => _carriages;
 
-    [SerializeField] private int _amountOfLettersInTrain = 0;
-    public int AmountOfLettersInTrain => _amountOfLettersInTrain;
+    [SerializeField] protected int _amountOfLettersInTrain = 0;
+    public int AmountOfLettersInTrain
+    {
+        get
+        {
+            return _amountOfLettersInTrain;
+        }
+        set
+        {
+            _amountOfLettersInTrain = value;
+        }
+    }
 
     [ContextMenu("CountAmountOfLettersInTrain")]
     public void CountAmountOfLettersInTrain()
     {
         _amountOfLettersInTrain = 0;
 
-        foreach(Carriage carriage in _carriages)
+        if (_carriages.Length > 0)
         {
-            _amountOfLettersInTrain += carriage.CountAmountOfLettersInCarriage();
+            foreach (Carriage carriage in _carriages)
+            {
+                _amountOfLettersInTrain += carriage.CountAmountOfLettersInCarriage();
+            }
         }
     }
 }
